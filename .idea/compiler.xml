@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="activemqdemo" />
+        <module name="nettyDemo" />
+        <module name="nioDemo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="activemqdemo" target="1.7" />
+      <module name="nettyDemo" target="1.7" />
+      <module name="nioDemo" target="1.7" />
+      <module name="springbootdemo" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

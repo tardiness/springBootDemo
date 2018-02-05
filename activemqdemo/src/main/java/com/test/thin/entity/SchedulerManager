@@ -1,0 +1,44 @@
+//package com.test.entity;
+//
+//import org.quartz.Scheduler;
+//import org.quartz.SchedulerException;
+//import org.quartz.SchedulerFactory;
+//import org.quartz.impl.StdSchedulerFactory;
+//
+///**
+// * @author shishaopeng
+// * @project onlytech-server
+// * @createDate 16:05 2018/1/2
+// * @modfiyDate
+// * @function
+// */
+//public class SchedulerManager {
+//
+//    private static SchedulerManager Instance = null;
+//
+//    private Scheduler scheduler = null;
+//
+//    private SchedulerManager(){
+//        startScheduler();
+//    }
+//
+//    public synchronized static SchedulerManager getInstance(){
+//        if(Instance == null){
+//            Instance = new SchedulerManager();
+//        }
+//        return Instance;
+//    }
+//
+//    private void startScheduler() {
+//        try{
+//            SchedulerFactory factory = new StdSchedulerFactory();
+//            scheduler = factory.getScheduler();
+//
+//            if(!scheduler.isStarted() || scheduler.isShutdown()){
+//                scheduler.start();
+//            }
+//        }catch (SchedulerException e){
+//            e.printStackTrace();
+//        }
+//    }
+//}

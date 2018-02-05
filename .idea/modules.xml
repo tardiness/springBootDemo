@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/activemqdemo/activemqdemo.iml" filepath="$PROJECT_DIR$/activemqdemo/activemqdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nettyDemo/nettyDemo.iml" filepath="$PROJECT_DIR$/nettyDemo/nettyDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nioDemo/nioDemo.iml" filepath="$PROJECT_DIR$/nioDemo/nioDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootdemo.iml" filepath="$PROJECT_DIR$/springbootdemo.iml" />
+    </modules>
+  </component>
+</project>
