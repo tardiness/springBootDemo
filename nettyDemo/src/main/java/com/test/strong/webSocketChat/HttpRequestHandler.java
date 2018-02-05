@@ -1,4 +1,4 @@
-package com.test.strong.handler;
+package com.test.strong.webSocketChat;
 
 import io.netty.channel.*;
 import io.netty.handler.codec.http.*;

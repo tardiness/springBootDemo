@@ -1,7 +1,5 @@
-package com.test.strong.initializer;
+package com.test.strong.webSocketChat;
 
-import com.test.strong.handler.HttpRequestHandler;
-import com.test.strong.handler.TextWebSocketFrameHandler;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

@@ -1,17 +1,11 @@
-package com.test.strong.servers;
+package com.test.strong.webSocketChat;
 
-import com.test.strong.handler.TextWebSocketFrameHandler;
-import com.test.strong.initializer.ChatServerInitializer;
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.Channel;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-import io.netty.util.concurrent.GlobalEventExecutor;
 import io.netty.util.concurrent.ImmediateEventExecutor;
 
 import java.net.InetSocketAddress;
@@ -35,7 +29,7 @@ public class ChatServer {
             ServerBootstrap bootstrap = new ServerBootstrap();
             bootstrap.group(bossGroup,workGroup)
                     .channel(NioServerSocketChannel.class)
-                    .childHandler(new ChatServerInitializer(channels))
+                    .childHandler(createInitializer(channels))
                     .option(ChannelOption.SO_BACKLOG,128)
                     .childOption(ChannelOption.SO_KEEPALIVE,true);
             System.out.println("ChatServer 启动了");
@@ -50,6 +44,11 @@ public class ChatServer {
             System.out.println("ChatServer 关闭了");
         }
     }
+
+    protected ChannelInitializer<Channel> createInitializer(ChannelGroup channels) {        //3
+        return new ChatServerInitializer(channels);
+    }
+
 
 
     public static void main(String[] args) throws Exception {
