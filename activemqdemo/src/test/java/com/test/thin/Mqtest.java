@@ -1,7 +1,7 @@
 package com.test.thin;
 
 import com.test.thin.producer.Producer;
-import com.test.thin.util.DES;
+//import com.test.thin.util.DES;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,11 +38,11 @@ public class Mqtest {
         String url = "";
     }
 
-    @Test
-    public void encodeTest(){
-        String content = "LZINkiBVvQ3z3Q+tD98etnfOi0rS5TMAMZG4z2+F+FC5uxSOSnJDCDK87CK8 cYJiw05omsk47JFniX9N/aGd/A==";
-        System.out.println(new DES().DecodeCBC(content));
-    }
+//    @Test
+//    public void encodeTest(){
+//        String content = "LZINkiBVvQ3z3Q+tD98etnfOi0rS5TMAMZG4z2+F+FC5uxSOSnJDCDK87CK8 cYJiw05omsk47JFniX9N/aGd/A==";
+//        System.out.println(new DES().DecodeCBC(content));
+//    }
 
 
 }
