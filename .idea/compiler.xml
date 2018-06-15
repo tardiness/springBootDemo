@@ -9,6 +9,7 @@
         <module name="activemqdemo" />
         <module name="nettyDemo" />
         <module name="nioDemo" />
+        <module name="threadDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="nettyDemo" target="1.7" />
       <module name="nioDemo" target="1.7" />
       <module name="springbootdemo" target="1.7" />
+      <module name="threadDemo" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

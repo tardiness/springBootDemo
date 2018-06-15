@@ -12,6 +12,7 @@
         <module>activemqdemo</module>
         <module>nioDemo</module>
         <module>nettyDemo</module>
+        <module>threadDemo</module>
     </modules>
 
     <properties>
