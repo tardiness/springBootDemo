@@ -3,6 +3,7 @@ package com.test.thin;
 import com.test.thin.producer.Producer;
 //import com.test.thin.util.DES;
 import org.apache.activemq.command.ActiveMQQueue;
+import org.apache.activemq.command.ActiveMQTopic;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,13 @@ public class Mqtest {
 //    @Scheduled(cron = "0/2 0 * * * ?")
     public void sendMessage(){
         producer.sendMessage(destination,"hello world");
+    }
+
+    @Test
+//    @Scheduled(cron = "0/2 0 * * * ?")
+    public void sendMessageTopic(){
+        Destination destination1 = new ActiveMQTopic("test.topic");
+        producer.sendMessage(destination1,"hello world");
     }
 
 

@@ -23,20 +23,20 @@ public class Consumer {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-//    @JmsListener(destination = "myTest.queue")
-//    public void receiveQueue(String text){
-//        System.out.println("consumer 接受到的报文："+ text);
-//    }
-
     @JmsListener(destination = "myTest.queue")
-    public void receiveQueue(Object text){
-        try{
-            Tree tree =(Tree) ((ObjectMessage)text).getObject();
-            System.out.println("consumer 接受到的报文："+ tree);
-            mongoTemplate.insert(tree,"testColl");
-
-        }catch (JMSException e){
-            System.out.println("error >>>>>>>");
-        }
+    public void receiveQueue(String text){
+        System.out.println("consumer 接受到的报文："+ text);
     }
+
+//    @JmsListener(destination = "myTest.queue")
+//    public void receiveQueue(Object text){
+//        try{
+//            Tree tree =(Tree) ((ObjectMessage)text).getObject();
+//            System.out.println("consumer 接受到的报文："+ tree);
+//            mongoTemplate.insert(tree,"testColl");
+//
+//        }catch (JMSException e){
+//            System.out.println("error >>>>>>>");
+//        }
+//    }
 }
