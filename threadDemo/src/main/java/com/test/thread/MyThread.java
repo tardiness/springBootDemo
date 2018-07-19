@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * @author: shishaopeng
@@ -34,23 +35,24 @@ public class MyThread extends Thread {
 
         long begin = new Date().getTime();
 // VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-        String prefix = "INSERT INTO `test_flower` (`id`, `name`, `age`, `petal`, `color`, `type`, `createTime`, `remark`)";
+        String prefix = "INSERT INTO `test_flower` ( `name`, `age`, `petal`, `color`, `type`, `createTime`, `remark`) VALUES ";
 
         try {
             StringBuffer suffix ;
             connection.setAutoCommit(false);
 
             PreparedStatement pst = (PreparedStatement) connection.prepareStatement("");
-            for(int i =1; i < 10; i++) {
+            for(int i =1; i <= 10; i++) {
                 suffix = new StringBuffer();
-                for(int j = 0; j <= 100000; j ++) {
-                    suffix.append("("+i+",'吊兰', '20', '5', 'green', '1', '2018-07-12 17:35:26' ,'备注')");
+                for(int j = 1; j <= 100000; j ++) {
+                    suffix.append("('吊兰', '20', '5', 'green', '1', '2018-07-12 17:35:26' ,'备注'),");
                 }
-                String sql = prefix + suffix;
+                String sql = prefix + suffix.substring(0,suffix.length()-1);
                 pst.addBatch(sql);
                 pst.executeBatch();
                 connection.commit();
                 suffix = new StringBuffer();
+                System.out.println(Thread.currentThread().getName()+"第"+i*100000+"条数据插入完成!");
             }
             pst.close();
             connection.close();
