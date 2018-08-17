@@ -9,7 +9,7 @@ import java.util.concurrent.CyclicBarrier;
  * @project: springBootDemo
  * @data: 2018/8/13
  * @modifyDate: 14:49
- * @Description:
+ * @Description:  等所有 线程 到达集合点，统一执行接下来的task（在本类中指 Grouper）
  */
 public class MatrixMock {
 
