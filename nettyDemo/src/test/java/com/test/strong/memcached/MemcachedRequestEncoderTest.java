@@ -1,5 +1,7 @@
 package com.test.strong.memcached;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.embedded.EmbeddedChannel;
 import io.netty.util.CharsetUtil;
@@ -8,6 +10,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.security.Key;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -49,5 +53,10 @@ public class MemcachedRequestEncoderTest {
         Assert.assertFalse(channel.finish());
         Assert.assertNull(channel.readInbound());
 
+    }
+
+    public static void main(String[] args) {
+        List<String> strings = JSONArray.parseArray("[\"TBZ153321026533278055\",\"TBZ153321026532655254\",\"TBZ153321026532194905\",\"TBZ153321026531643627\"]",String.class);
+        System.out.printf(strings.toString());
     }
 }
