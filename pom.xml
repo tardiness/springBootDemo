@@ -13,6 +13,8 @@
         <module>nioDemo</module>
         <module>nettyDemo</module>
         <module>threadDemo</module>
+        <module>otherDemo</module>
+        <module>sortDemo</module>
     </modules>
 
     <properties>
@@ -36,6 +38,11 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.42</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.28</version>
         </dependency>
     </dependencies>
 
