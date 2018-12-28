@@ -1,6 +1,8 @@
 package com.test.sorted;
 
 
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * @author: shishaopeng
  * @project: springBootDemo
@@ -147,7 +149,17 @@ public class HardSort {
 
     /**********************************  归并排序  *********************************/
 
-    /**
+    /**  比如  4,5 1,3    45 13 都分别是经过一次排好序的
+     *      然后在归并的时候  4 会和 1 比较  先放 1  j++   4 和 3比较  先放3 j++ 跳出第一个循环
+     *      后边 循环
+     *
+     *       while(i<=mid){//将左边剩余元素填充进temp中
+                temp[t++] = data[i++];
+             }
+
+            的时候  把 4 5 放进去
+     *
+     *     再考虑 4,5,1,6
      * 归并排序
      * @param data
      */
@@ -197,5 +209,60 @@ public class HardSort {
 
     /******************************  快速排序  **************************/
 
+    /**
+     * 快速排序
+     * @param data
+     */
+    public void quickSort(int[] data,int left,int right) {
+        if (left < right) {
+            //获取枢纽值，并将其放在当前待处理序列末尾
+            dealPivot(data, left, right);
+            //枢纽值被放在序列末尾
+            int pivot = right - 1;
+            //左指针
+            int i = left;
+            //右指针
+            int j = right - 1;
+            while (true) {
+                // 从左边找 大于 data[pivot] 的  找不到 就 i++
+                while (data[++i] < data[pivot]) {
+                }
+                // 从右边找 没和左边相交 并且 小于 data[pivot] 的  找不到 就 j--
+                while (j > left && data[--j] > data[pivot]) {
+                }
+                if (i < j) {
+                    swap(data, i, j);
+                } else {
+                    // i >= j 时 即 相交了 交换data[pivot]  (即 交换data[right - 1]) 和 data[i]
+                    break;
+                }
+            }
+            if (i < right) {
+                swap(data, i, right - 1);
+            }
+            quickSort(data, left, i - 1);
+            quickSort(data, i + 1, right);
+        }
+    }
+
+    /**
+     * 处理枢纽值
+     * @param data
+     * @param left
+     * @param right
+     */
+    private void dealPivot(int[] data, int left, int right) {
+        int mid = (left + right) / 2;
+        if (data[left] > data[mid]) {
+            swap(data, left, mid);
+        }
+        if (data[left] > data[right]) {
+            swap(data, left, right);
+        }
+        if (data[right] < data[mid]) {
+            swap(data, right, mid);
+        }
+        swap(data, right - 1, mid);
+    }
 
 }
