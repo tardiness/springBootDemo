@@ -30,6 +30,14 @@ public class HasStatic{
         if (number == 1 || number == 2) {
             return 1;
         }
+//
+//        int a = 1;int b = 1;int c = 0;
+//        for (int i=3;i<number;i++) {
+//            c = a+b;
+//            a = b;
+//            b = c;
+//        }
+//        return c;
         return fib(number - 2) + fib(number - 1);
     }
 
@@ -74,6 +82,7 @@ public class HasStatic{
         if (b == 1) {
             return a;
         }
+        //e>>1相等于e/2，这里就是求a^n =（a^n/2）*（a^n/2）
         double result = getPower(a,b>>1);
         result *= result;
         if ((b&1) == 1)
