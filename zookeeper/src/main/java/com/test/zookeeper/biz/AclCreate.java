@@ -22,18 +22,18 @@ public class AclCreate implements Watcher {
 
     public void syncInit() {
         try {
-            zk = new ZooKeeper("192.168.88.116",5000,new AclCreate());
+            zk = new ZooKeeper("127.0.0.1",5000,new AclCreate());
             count.await();
             zk.addAuthInfo("digest","admin:123456".getBytes());
             zk.create("/act","init".getBytes(), ZooDefs.Ids.CREATOR_ALL_ACL, CreateMode.EPHEMERAL);
 
-            ZooKeeper zk3 = new ZooKeeper("192.168.88.116",5000,null);
+            ZooKeeper zk3 = new ZooKeeper("127.0.0.1",5000,null);
             zk3.addAuthInfo("digest","admin:123456".getBytes());
             String value2 = new String(zk3.getData("/act",false,null));
 
             System.out.println("zk3有权限进行数据的获取" + value2);
 
-            ZooKeeper zk2 =  new ZooKeeper("192.168.88.116", 5000,
+            ZooKeeper zk2 =  new ZooKeeper("127.0.0.1", 5000,
                     null);
             zk2.addAuthInfo("digest", "super:123".getBytes());
             zk2.getData("/act", false, null);
