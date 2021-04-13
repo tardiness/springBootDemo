@@ -6,18 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="activemqdemo" />
-        <module name="nettyDemo" />
         <module name="nioDemo" />
+        <module name="zookeeper" />
+        <module name="leetCode" />
+        <module name="sortDemo" />
+        <module name="nettyDemo" />
         <module name="threadDemo" />
+        <module name="activemqdemo" />
+        <module name="otherDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="activemqdemo" target="1.7" />
+      <module name="leetCode" target="1.7" />
       <module name="nettyDemo" target="1.7" />
       <module name="nioDemo" target="1.7" />
+      <module name="otherDemo" target="1.7" />
+      <module name="sortDemo" target="1.7" />
       <module name="springbootdemo" target="1.7" />
       <module name="threadDemo" target="1.7" />
+      <module name="zookeeper" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="zookeeper" options="-parameters" />
+    </option>
   </component>
 </project>

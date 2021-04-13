@@ -3,8 +3,22 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/activemqdemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activemqdemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/activemqdemo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leetCode" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/leetCode/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/nettyDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nettyDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nettyDemo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/nioDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nioDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/otherDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/otherDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sortDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sortDemo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/threadDemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/threadDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zookeeper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zookeeper/src/main/java" charset="UTF-8" />
   </component>
 </project>

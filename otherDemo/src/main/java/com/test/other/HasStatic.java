@@ -1,5 +1,13 @@
 package com.test.other;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 public class HasStatic{
 
 
@@ -103,6 +111,22 @@ public class HasStatic{
 
         for (int i=0;i<arr.length;i++)
             System.out.println(arrNew[i]);
+    }
+
+
+    class Lrucache<K,V> extends LinkedHashMap<K,V> {
+
+        private Integer CACHE_SIZE;
+
+        public Lrucache( Integer cacheSize) {
+            super((int) Math.ceil(cacheSize / 0.75) + 1, 0.75f, true);
+            this.CACHE_SIZE = cacheSize;
+        }
+
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
+            return size()>CACHE_SIZE;
+        }
     }
 
 }

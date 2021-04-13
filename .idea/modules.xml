@@ -3,10 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/activemqdemo/activemqdemo.iml" filepath="$PROJECT_DIR$/activemqdemo/activemqdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetCode/leetCode.iml" filepath="$PROJECT_DIR$/leetCode/leetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/nettyDemo/nettyDemo.iml" filepath="$PROJECT_DIR$/nettyDemo/nettyDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/nioDemo/nioDemo.iml" filepath="$PROJECT_DIR$/nioDemo/nioDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otherDemo/otherDemo.iml" filepath="$PROJECT_DIR$/otherDemo/otherDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sortDemo/sortDemo.iml" filepath="$PROJECT_DIR$/sortDemo/sortDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootdemo.iml" filepath="$PROJECT_DIR$/springbootdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/threadDemo/threadDemo.iml" filepath="$PROJECT_DIR$/threadDemo/threadDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zookeeper/zookeeper.iml" filepath="$PROJECT_DIR$/zookeeper/zookeeper.iml" />
     </modules>
   </component>
 </project>
